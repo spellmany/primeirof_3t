@@ -1,39 +1,53 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+.calculadora{
+    background:rgb(142, 135, 197);
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px darkorchid;
+}
+.calculadora input{
+    background:rosybrown;
+    color: rgb(70, 63, 56);
+    padding: 10px;
+    border-radius: 20px;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro F</title>
-    <script src="estudo.js"></script>
-    <link rel="stylesheet" href="geral.css">
-</head>
+}
+.calculadora input:focus{
+    background: red;
+    color: orange;
+}
+#spTotal{
+    background: black;
+    color: rgb(243, 243, 243);
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.calculadora button{
+    background: black;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.calculadora button:hover{
+    background: rgb(211, 209, 209);
+    color: rgb(116, 19, 19);
+    cursor: help;
+}
+.calcF{
+    display: none;
+}
+#input-calcF{
+    display: none;
+}
+h4{
+    color: black;
+}
 
-<body>
-    <input type="checkbox" id="input-calcF">
-    
-    <div class="calculadora">
-
-        <label for="input-calcF">
-            <h4>Financeira</h4>
-        </label>
-        <div class="calcF">
-
-            <div id="spTotal">
-                <span id="total">Total: 0,00</span>
-            </div>
-            Capital: <input id="valor" type="text"><br>
-            Juros mensais: <input id="juros" type="text"><br>
-            Nr. meses: <input id="meses" type="text"><br>
-            <button onclick="total()"> Enviar</button><br>
-            <div id="spMes">
-                <span id="mes">Meses</span>
-            </div>
-       
-        </div>
-    
-    </div>
-</body>
-
-</html>
+#input-calcF:checked + .calculadora .calcF{
+    display: block;
+}
